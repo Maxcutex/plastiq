@@ -12,10 +12,6 @@ resource "aws_cloudfront_distribution" "main" {
       origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
     }
 
-    custom_header {
-      name  = "User-Agent"
-      value = var.secret_user_agent
-    }
   }
 
   enabled             = true
